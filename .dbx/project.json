@@ -1,0 +1,9 @@
+{
+  "environments": {
+    "default": {
+      "profile": "DEFAULT",
+      "workspace_dir": "/Shared/dbx/demo_prep",
+      "artifact_location": "dbfs:/Shared/dbx/projects/demo_prep"
+    }
+  }
+}
