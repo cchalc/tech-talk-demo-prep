@@ -1,1 +1,1 @@
-# dummy file 2
+# testing the release 1.0
