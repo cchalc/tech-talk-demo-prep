@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../terraform-field-patterns"
+		}
+	],
+	"settings": {}
+}
