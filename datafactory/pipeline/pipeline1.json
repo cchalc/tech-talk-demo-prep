@@ -25,7 +25,7 @@
 					]
 				},
 				"linkedServiceName": {
-					"referenceName": "AzureDatabricks1",
+					"referenceName": "AzureDatabricks2",
 					"type": "LinkedServiceReference"
 				}
 			}
