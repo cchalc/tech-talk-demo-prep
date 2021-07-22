@@ -14,7 +14,7 @@
 				"secretName": "databricks-access-token"
 			},
 			"newClusterNodeType": "Standard_DS3_v2",
-			"newClusterNumOfWorker": "2",
+			"newClusterNumOfWorker": "4",
 			"newClusterSparkEnvVars": {
 				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 			},
