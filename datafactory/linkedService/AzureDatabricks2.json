@@ -1,24 +1,41 @@
 {
 	"name": "AzureDatabricks2",
 	"properties": {
-		"annotations": [],
 		"type": "AzureDatabricks",
-		"typeProperties": {
-			"domain": "https://adb-547448167446934.14.azuredatabricks.net",
-			"accessToken": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "AzureKeyVault1",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "databricks-access-token"
+		"annotations": []
+	},
+	"settings": {
+		"new_cluster": {
+			"spark_version": "8.3.x-scala2.12",
+			"spark_conf": {
+				"spark.databricks.delta.preview.enabled": "true"
 			},
-			"newClusterNodeType": "Standard_DS3_v2",
-			"newClusterNumOfWorker": "2",
-			"newClusterSparkEnvVars": {
+			"azure_attributes": {
+				"availability": "ON_DEMAND_AZURE"
+			},
+			"node_type_id": "Standard_DS3_v2",
+			"spark_env_vars": {
 				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 			},
-			"newClusterVersion": "7.3.x-cpu-ml-scala2.12"
-		}
+			"enable_elastic_disk": true,
+			"num_workers": 8
+		},
+		"libraries": [
+			{
+				"pypi": {
+					"package": "schema"
+				}
+			}
+		],
+		"notebook_task": {
+			"notebook_path": "/tmp/pool_testing/test"
+		},
+		"name": "test",
+		"schedule": {
+			"quartz_cron_expression": "0 0 0 1 * ?",
+			"timezone_id": "US/Pacific",
+			"pause_status": "PAUSED"
+		},
+		"max_concurrent_runs": 1
 	}
 }
